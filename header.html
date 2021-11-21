@@ -1,0 +1,285 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="shortcut icon" href="images/logo.png"/>
+<style>
+*
+{
+margin:0px;
+padding:0px;
+}
+ #menu ul
+{
+list-style:none;
+z-index:999;
+}
+#menu ul li
+{
+background-color:white;
+border:1px solid white;
+min-width:150px;
+height:45px;
+text-align:center;
+position:relative;
+border-radius:8px;
+}
+#menu ul li a
+{
+text-decoration:none;
+color:black;
+display:block;
+}
+ #menu ul li a:hover
+{
+background-color:FF6600;
+border-radius:16px;
+}
+
+ #menu ul ul
+{
+position:absolute;
+display:none;
+
+}
+ #menu ul li:hover  >  ul
+{
+display:block;
+}
+ #menu ul ul ul
+{
+margin-left:280px;
+top:0px;
+
+}
+#meq input
+{
+padding:0px;
+width:49%;
+height:30px;
+margin-bottom:10px;
+}
+#chatbtn
+{
+color:orange;
+margin-top:400px;
+margin-left:92%;
+z-index:999;
+border:2px solid orange;
+position:fixed;
+}
+#chatbtn a:hover
+{
+color:orange;
+<p> leave a chat</p>
+}
+#chatf
+{
+z-index:99;
+width:30%;
+color:white;
+position:fixed;
+padding:30px;
+top:250px;
+margin-left:60%;
+min-height:200px;
+background:white;
+
+}
+#chatf input
+{
+margin-right:30%;
+margin-bottom:10px;
+}
+#chatf span img{background:#FF6600;color:white;}
+#chatf button
+{
+background:#FF6600;
+color:white;
+}
+#chatf span
+{
+background:#FF6600;
+}
+
+</style>
+<meta charset="UTF-8">
+</head>
+<div class="row"style="min-height:30px; ">
+<div class="col-sm-3"style="background-color:FF6633;padding:0px;margin-left:0px;border:1px solid aqua; "><img src="images/logo.png"height="100px"width="100%;"/>
+</div>
+<div class="col-sm-9 text-justify"style="background-color:FF6633;padding:30px;color:white;font-family:Georg ;">
+<center><h4 style="float:left;margin-left:100px;"> CALL US: +1800-120-911-911</h4><a href=""style="float:left;margin-left:100px;"><input id="btneq" onclick="managePopup(this,dveq)"type="button" value="MAKE AN ENQUERY"/></a>
+
+
+<a href="https://www.facebook.com/mxshinehealth/" target="_blank">
+ <img src="images/facebook.png" width="30px" height="30px"/> </a> 
+ &nbsp;&nbsp;
+ <a href="https://twitter.com/MaxshineH" target="_blank">
+ <img src="images/twitter.png" width="30px" height="30px" /> </a>
+&nbsp;&nbsp;
+ <a href="https://www.instagram.com/explore/locations/2215638958563513/maxshine-health-care/" target="_blank">
+ <img src="images/instagram.png" width="30px" height="30px" /> </a>
+ &nbsp;&nbsp;
+ <a href="https://www.youtube.com/watch?v=1ryT5on_4HE" target="_blank"style="margin-right:40px;">
+ <img src="images/youtube.png" width="30px" height="30px" /> </a>
+</center>
+</div>
+</div>
+
+<div id="dveq" style="min-width:450px;min-height:300px;background-color:white;position:absolute;top:145px;left:25%;
+border-radius:10px;border:1px solid #FF8C00;padding:10px;display:none;z-index:999;">
+<h2 style="background:	#FF6347;color:white;"><p class="text-center"font="20">Maxshinehealth ?</p></h2>
+<hr style="background-color:black;margin:-14px 20px 8px 20px;padding:0px;"/>
+<form  id="meq"action="saveenquiry.php" method="post">
+<input type="text"  name="name" placeholder="Name" style="margin-bottom:8px;"  required="ture"/>
+<input type="email"  name="email" placeholder="Email" style="margin-bottom:8px;"  required="ture"/><br/>
+<input type="number" name="mobno" placeholder="Mobile No" style="margin-bottom:8px;" />
+<input type="text" name="subject" placeholder="SUBJECT"required="ture" style="margin-bottom:8px;" />
+<br/>
+<textarea class="form-control" name="message" placeholder="Type your message here..." rows="6" style="margin-bottom:8px;" required="ture"></textarea>
+<input type="submit" value="Submit" class="btn btn-success"class="form-control"style="background:#FF6347;" />
+
+</form>
+</div>
+<script>
+ function managePopup(btn,dv)
+ {
+	 var status=dv.style.display;
+	 if(status=="none")
+		 dv.style.display="block";
+	 else
+		 dv.style.display="none";
+ }
+</script>
+
+<div class="row"style="min-height:30px">
+<div class="col-sm-12"style="background-color:#00FA9A;padding:0px;">
+<!-- menubar start-->
+<nav class="navbar navbar-expand-lg navbar-light "style="background:white;">
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+ <div id="menu"class="collapse navbar-collapse" id="navbarSupportedContent"style="color:blue;border:5px solid #848484;">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="navbar-brand" href="index.php"><b>Home</b> <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="navbar-brand" href="aboutus.php"><b>About_Us</b></a>
+      </li>
+	  <li class="nav-item">
+        <a class="navbar-brand" href="alltest.php"><b>Book_Test</b></a>
+      </li>
+	  <li class="nav-item">
+        <a class="navbar-brand" href="#"><b>Health_Packages</b>&nbsp;&nbsp;<span><img src="images/dropdown.png"height="20px"/><span></a>
+		<ul>
+		<li class="nav-item">
+		<a class="navbar-brand"href="#"><b> >&nbsp;Maxshine Special Packages</b></a>
+		<ul>
+		 <li class="nav-item">
+        <a class="navbar-brand" href="detail.php"><b>>&nbsp;Advance Package Men</b></a>
+		</li>
+		<li class="nav-item">
+        <a class="navbar-brand" href="#"><b>>&nbsp;Elementary Packages</b></a>
+		</li>
+		<li class="nav-item">
+        <a class="navbar-brand" href="#"><b>>&nbsp;Essential Packages</b></a>
+		</li>
+		<li class="nav-item">
+        <a class="navbar-brand" href="#"><b>>&nbsp;Advance Package Women</b></a>
+		</li>
+		</ul>
+		</li>
+		<li class="nav-item">
+		<a class="navbar-brand"href="#"><b>>&nbsp;Maxshine Mens Packages</b></a>
+		<ul>
+		<li class="nav-item">
+		<a class="navbar-brand"href="#"><b>>&nbsp;Advance Package Men</b></a>
+		</li>
+		</ul>
+		</li>
+		<li class="nav-item">
+		<a class="navbar-brand"href="#"><b>>&nbsp;Maxshine Women Packages</b></a>
+		<ul>
+		<li class="nav-item">
+		<a class="navbar-brand"href="#"><b>>&nbsp;Advance Package Women</b></a>
+		</li>
+		<li class="nav-item">
+		<a class="navbar-brand"href="#"><b> >&nbsp;Women's Special Package</b></a>
+		</li>
+		</ul>
+		</li>
+		<li class="nav-item">
+		<a class="navbar-brand"href="#"><b>>&nbsp;Maxshine Other Packages</b></a>
+		<ul>
+		<li class="nav-item">
+		<a class="navbar-brand"href="#"><b>>&nbsp;Thyroid Package</b></a>
+		</li>
+		<li class="nav-item">
+		<a class="navbar-brand"href="#"><b>>&nbsp;Heart Package</b></a>
+		</li>
+		<li class="nav-item">
+		<a class="navbar-brand"href="#"><b>>&nbsp;Diabities Package Panel 1</b></a>
+		</li>
+		<li class="nav-item">
+		<a class="navbar-brand"href="#"><b>>&nbsp;Diabities Package Panel 2</b></a>
+		</li>
+		</ul>
+		</li>
+		<li class="nav-item">
+		<a class="navbar-brand"href="#"><b>>&nbsp;Maxshine Kids Packages</b></a>
+		<ul>
+		<li class="nav-item">
+		<a class="navbar-brand"href="#"><b>>&nbsp;Kids Package</b></a>
+		</li>
+		</ul>
+		</li>
+		</ul>
+		</li>
+	  <li class="nav-item">
+        <a class="navbar-brand" href="#"><b>Track_Report</b></a>
+      </li>
+	  <li class="nav-item">
+        <a class="navbar-brand" href="contactus.php"><b>contact_Us</b></a>
+      </li>
+	  <li class="nav-item">
+        <a class="navbar-brand" href="#"><b>CART-ITEMS(0)</b></a>
+      </li>
+	   <li class="nav-item">
+        <a class="navbar-brand" href="#"><b>More</b></a>
+      </li>
+</ul>
+   
+  </div>
+</nav>
+</div>
+</div>
+
+<div id="chatf">
+<form action="#"method="post">
+<span><img src="images/msglogo.png"height="30px"/>Chat Now<b style="margin-left:65%;">-</b></span><br>
+<img src="images/chatimg.png"height="40px"width="100%">
+<input type="text"placeholder="Your Name"class="form-control"/>
+<input type="email"placeholder="Email address"class="form-control"/>
+<input type="text"placeholder="or sign in width :"><a href="#"><img src="images/facebook.png"height="20px"/></a>&nbsp;&nbsp;<a href="#"><img src="images/google.png"height="20px"></a></input>
+<textarea type="text" placeholder="Type your Question or message" class="form-control">
+</textarea><br>
+<button type="submit"class="form-control">Send</button>
+</form>
+</div>
+<script type="text/javascript">
+ function managechatPopup()
+ {
+	 var chbtn=document.getElementById("chatbtn");
+	 var chf=document.getElementById("chatf");
+	 if(chbtn.onmouseover)
+		 chf.style.display="block";
+	 else
+		 chf.style.display="none";
+ }
+</script>
+
+<button id="chatbtn"onclick="managechatPopup()"><a href="#"><img src="images/chat.png"height="40px;"title="Leave a chat"/></a></button>
+</html>
